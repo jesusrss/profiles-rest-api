@@ -27,8 +27,6 @@ class UserProfileManager(BaseUserManager):
         user.save(using=self._db)
 
 
-# Create your models here.
-
 class UserProfile(AbstractBaseUser, PermissionsMixin):
     """Databases model for users in the system"""
     email = models.EmailField(max_length=255, unique=True)
